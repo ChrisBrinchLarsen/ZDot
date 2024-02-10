@@ -1,0 +1,39 @@
+local o = vim.opt -- Globally Exposed list of options, see :options
+local bo = vim.bo -- Table of options for buffers
+local wo = vim.wo -- Table of options for windows
+local to = vim.to -- Table of options for tabs
+local g = vim.g  -- Table of global variables
+
+g.loaded_netrw = 1
+g.loaded_netrwPlugin = 1
+
+o.showmode       = false   -- Don't show -- INSERT -- etc at the bottom of the screen (we don't need this with Lualine)
+o.hlsearch       = false   -- Don't highlight searched words
+o.number         = true    -- Line Numbers
+o.relativenumber = true    -- Relative Line Numbers
+o.splitbelow     = true    -- New Horizontal Split Spawns Below
+o.splitright     = true    -- New Vertical Split Spawns on the Right
+o.wrap           = false   -- Lines don't wrap
+o.expandtab      = true    -- Tabs are expanded into spaces
+o.tabstop        = 4       -- Tabs are 4 spaces wide
+o.shiftwidth     = 4       -- Sets the indent (>>) and dedent (<<) operators to also use 4 spaces
+o.clipboard      = "unnamedplus" -- Neovim Interacts with our system clipboard, we can use "p" to paste text copied from elsewhere
+o.scrolloff      = 15      -- Scrolling offset, 999 makes our cursor always vertically centered
+o.virtualedit    = "block" -- Improves Visual Block Mode (<C-v>) by making nvim think the entire screen is filled cells, making us go beyond line selections
+o.inccommand     = "split" -- Opens a preview split when performing certain replacement techniques such as :%s/word/word, useful when searched lines are too far away from each other to preview manually
+o.ignorecase     = true    -- Ignore case when searching for commands
+o.termguicolors  = true    -- Allows us to use all colors (24-bit color support)
+o.cmdheight      = 2       -- More space on the command line bar
+o.fileencoding   = "utf-8" -- So that we write utf-8 encoded text into files
+o.timeoutlen     = 2000    -- Time we have to complete keymap sequences
+o.undofile       = true
+o.colorcolumn    = "80"
+o.conceallevel   = 0
+o.cursorline     = true
+o.smartcase      = true
+o.sidescrolloff  = 8
+o.signcolumn     = "yes"
+o.updatetime     = 250
+o.completeopt    = 'menuone,noselect'
+o.whichwrap      = "bs<>[]hl"
+o.iskeyword:append "-"

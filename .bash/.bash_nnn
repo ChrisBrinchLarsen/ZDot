@@ -1,0 +1,8 @@
+export NNN_PLUG='o:fzopen;j:autojump;p:preview-tui;t:preview-tabbed;i:imgview;d:dragdrop;g:gitroot'
+
+# See https://github.com/jarun/nnn/wiki/Usage
+export NNN_FCOLORS='000031582400210000000000'
+export NNN_COLORS='#55555555'
+export NNN_BMS="d:$HOME"
+export NNN_TERMINAL=st
+export NNN_FIFO=/tmp/nnn.fifo
